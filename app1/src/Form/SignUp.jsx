@@ -1,5 +1,7 @@
 import './SignUp.css';
 import Img from '../assets/Img.svg';
+import PassShow from '../assets/passshow.svg'
+
 function SignUp(){
     return (
         <div>
@@ -9,8 +11,8 @@ function SignUp(){
                     <div className='Title'>
                         <label className='T1'>5</label>
                         <div className='TitleText'>
-                            <label htmlFor="">Minutes</label>
-                            <label htmlFor="">Seconds</label>
+                            <label htmlFor="">Tips</label>
+                            <label htmlFor="">here</label>
                         </div>
                     </div>
                     
@@ -25,7 +27,31 @@ function SignUp(){
 
 
                 <div className="RightPanel">
-                    <h1>RightPanel</h1>
+                    <div className='RightPanelTitle'>
+                        <p>
+                            Create Account
+                        </p>
+                    </div>
+                    <form className='Form' action="">
+                        <label className='Name'><input type="text" placeholder='Name' /></label>
+                        <label className='Name'><input type="email" placeholder='Email Address' /></label>
+                        <label className='Password'>
+                            <input type="password" placeholder='Password' />
+                            <div className='ShowPasswordIcon'>
+                                <img src={PassShow} alt="ShowIcon" width={20} />
+                            </div>
+                        </label>
+                        <label className='CheckBox'>
+                            <input type="checkbox"  /> 
+                            <span>I agree to the terms of services and privacy policy</span>
+                        </label>
+                        <label className='SubmitBtn'><button type="submit">Sign Up</button></label>
+
+
+                        
+                        
+                        
+                    </form>
                     
                 </div>
             </div>

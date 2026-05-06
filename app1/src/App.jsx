@@ -11,9 +11,9 @@ function App() {
     <div>
 
       <SignUp/>
-      <Header/>
+      {/* <Header/>
       <Body/>
-      <Contact/>
+      <Contact/> */}
 
     </div>
   );
