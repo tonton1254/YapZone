@@ -46,6 +46,7 @@
     border-radius: 14px;
     padding: 0.5em 1.5em;
     line-height: 22px;
+    margin-top: 5px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .card:hover {
