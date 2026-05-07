@@ -1,8 +1,24 @@
 import './SignUp.css';
 import Img from '../assets/Img.svg';
-import PassShow from '../assets/passshow.svg'
+import PassShowIcon from '../assets/passshow.svg'
+import PassHideIcon from '../assets/PassHide.svg'
+
+import { useState } from 'react';
+
 
 function SignUp(){
+    const[Icon,setIcon] = useState(PassShowIcon);
+    const[InputType, SetInputType] = useState('password');
+    const ToggleIcon = () =>{
+        if(InputType === 'password'){
+            SetInputType('text');
+            setIcon(PassHideIcon);
+        }
+        else{
+            SetInputType('password');
+            setIcon(PassShowIcon);
+        }
+    }
     return (
         <div>
             <div className="Container">
@@ -36,9 +52,9 @@ function SignUp(){
                         <label className='Name'><input type="text" placeholder='Name' /></label>
                         <label className='Name'><input type="email" placeholder='Email Address' /></label>
                         <label className='Password'>
-                            <input type="password" placeholder='Password' />
-                            <div className='ShowPasswordIcon'>
-                                <img src={PassShow} alt="ShowIcon" width={20} />
+                            <input type={InputType} placeholder='Password' />
+                            <div className='ShowPasswordIcon' onClick={ToggleIcon}>
+                                <img src={Icon} alt="ShowIcon" width={20} />
                             </div>
                         </label>
                         <label className='CheckBox'>
